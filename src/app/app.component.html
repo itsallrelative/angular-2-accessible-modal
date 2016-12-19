@@ -1,7 +1,7 @@
 <main>
   <button (click)="modal.openModal()">Open Modal</button>
 </main>
-<app-modal #modal>
+<app-modal #modal [modaltitle]="'This is the title'">
   <h3>This is a Subheading</h3>
   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci alias cum eligendi et eum excepturi facere id in inventore, neque numquam pariatur reiciendis rem reprehenderit rerum sed ullam ut veritatis.</p>
   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto consectetur dolore doloremque impedit ipsa non optio! Autem illo maxime porro veritatis? Ad dolores, nihil sed soluta ut voluptatibus? Eaque, rerum!</p>

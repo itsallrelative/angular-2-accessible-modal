@@ -1,4 +1,4 @@
-import {Component, ElementRef} from '@angular/core';
+import {Component, ElementRef, Input} from '@angular/core';
 
 @Component({
   selector: 'app-modal',
@@ -7,6 +7,8 @@ import {Component, ElementRef} from '@angular/core';
   host: { '(document:keyup)': 'escapePressed($event)' }
 })
 export class ModalComponent {
+  @Input() modaltitle: string;
+
   hideContainer: boolean;
   modal: any;
 
