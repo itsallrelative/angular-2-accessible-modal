@@ -1,0 +1,14 @@
+<aside class="modal-container" [attr.aria-hidden]="hideContainer">
+  <section class="modal" role="dialog" aria-labelledby="modal-title" aria-describedby="" tabindex="0">
+    <header class="modal-header">
+      <h2 id="modal-title" class="modal-title">Modal</h2>
+      <button class="close-button" (click)="closeModal()">&times;</button>
+    </header>
+    <div class="modal-content">
+      <ng-content></ng-content>
+    </div>
+    <footer class="modal-footer">
+      <h3 class="modal-footer-heading">Modal Footer</h3>
+    </footer>
+  </section>
+</aside>
