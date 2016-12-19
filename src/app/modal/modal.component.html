@@ -2,7 +2,10 @@
   <section class="modal" role="dialog" aria-labelledby="modal-title" aria-describedby="" tabindex="0" role="region">
     <header class="modal-header" role="banner">
       <h2 id="modal-title" class="modal-title">{{modaltitle}}</h2>
-      <button class="close-button" (click)="closeModal()">&times;</button>
+      <button class="close-button" (click)="closeModal()">
+        <span aria-hidden="true">&times;</span>
+        <span class="screen-reader-text">Close this modal</span>
+      </button>
     </header>
     <div class="modal-content">
       <ng-content></ng-content>
