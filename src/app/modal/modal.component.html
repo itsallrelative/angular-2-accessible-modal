@@ -1,13 +1,13 @@
-<aside class="modal-container" [attr.aria-hidden]="hideContainer">
-  <section class="modal" role="dialog" aria-labelledby="modal-title" aria-describedby="" tabindex="0">
-    <header class="modal-header">
+<aside class="modal-container" [attr.aria-hidden]="hideContainer" role="complementary">
+  <section class="modal" role="dialog" aria-labelledby="modal-title" aria-describedby="" tabindex="0" role="region">
+    <header class="modal-header" role="banner">
       <h2 id="modal-title" class="modal-title">{{modaltitle}}</h2>
       <button class="close-button" (click)="closeModal()">&times;</button>
     </header>
     <div class="modal-content">
       <ng-content></ng-content>
     </div>
-    <footer class="modal-footer">
+    <footer class="modal-footer" role="contentinfo">
       <h3 class="modal-footer-heading">Modal Footer</h3>
     </footer>
   </section>
