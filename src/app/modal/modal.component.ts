@@ -8,6 +8,7 @@ import {Component, ElementRef, Input} from '@angular/core';
 })
 export class ModalComponent {
   @Input() modaltitle: string;
+  @Input() modalfootertitle: string
 
   hideContainer: boolean;
   modal: any;
