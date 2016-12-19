@@ -10,7 +10,7 @@
     <div class="modal-content">
       <ng-content></ng-content>
     </div>
-    <footer class="modal-footer" role="contentinfo">
+    <footer class="modal-footer" role="contentinfo" *ngIf="showfooter">
       <h3 class="modal-footer-heading">{{modalfootertitle}}</h3>
     </footer>
   </section>
