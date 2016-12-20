@@ -25,7 +25,7 @@ The modal variable name can be whatever you wish, so you can have multiple modal
  - .screen-reader-text class, to visually hide elements from users, but will be read by screen readers: [screen reader text example](https://make.wordpress.org/accessibility/2015/02/09/hiding-text-for-screen-readers-with-wordpress-core/)
 
 ## Options ##
-The can change the modal header and footer text by changing the `[modaltitle]` and `[modalfootertitle]` respectively. 
+You can change the modal header and footer text by changing the `[modaltitle]` and `[modalfootertitle]` respectively. 
 
     <app-modal #modal [modaltitle]="'This is the title'" [modalfootertitle]="'This is the footer title'">
 	    Your modal content goes here
