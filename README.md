@@ -22,6 +22,7 @@ The modal variable name can be whatever you wish, so you can have multiple modal
  - Has all necessary aria roles assigned to the main wrapping template. Updates aria roles when opened and closed.
  - Auto focuses on the modal window when it is opened.
  - Closes the modal when the escape key is pressed. 
+ - Resets focus to the last focused element on the page when the modal is closed.
  - .screen-reader-text class, to visually hide elements from users, but will be read by screen readers: [screen reader text example](https://make.wordpress.org/accessibility/2015/02/09/hiding-text-for-screen-readers-with-wordpress-core/)
 
 ## Options ##

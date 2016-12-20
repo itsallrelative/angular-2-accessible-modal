@@ -15,6 +15,7 @@ export class ModalComponent {
 
   hideContainer: boolean;
   modal: any;
+  lastFocusedElement: any;
 
   constructor(modal: ElementRef) {
     this.hideContainer = true;
@@ -29,12 +30,14 @@ export class ModalComponent {
   }
 
   openModal(){
+    this.lastFocusedElement = event.currentTarget;
     this.hideContainer = false;
     this.modal.nativeElement.querySelector('.modal').focus();
   }
 
   closeModal(){
     this.hideContainer = true;
+    if(this.lastFocusedElement) this.lastFocusedElement.focus();
   }
 
   escapePressed(event){
