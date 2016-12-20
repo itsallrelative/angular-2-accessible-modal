@@ -1,11 +1,11 @@
 <aside class="modal-container" [attr.aria-hidden]="hideContainer" role="complementary">
-  <section class="modal" role="dialog" aria-labelledby="modal-title" aria-describedby="" tabindex="0" role="region">
-    <header class="modal-header" role="banner">
-      <h2 id="modal-title" class="modal-title">{{modaltitle}}</h2>
-      <button class="close-button" (click)="closeModal()">
-        <span aria-hidden="true">&times;</span>
-        <span class="screen-reader-text">Close this modal</span>
-      </button>
+  <section class="modal" role="dialog" aria-labelledby="modal-title" [attr.aria-describedby]="modaldescription" tabindex="0" role="region">
+    <button class="close-button" (click)="closeModal()">
+      <span aria-hidden="true">&times;</span>
+      <span class="screen-reader-text">Close this modal</span>
+    </button>
+    <header class="modal-header" role="banner" *ngIf="showheader">
+      <h1 id="modal-title" class="modal-title">{{modaltitle}}</h1>
     </header>
     <div class="modal-content">
       <ng-content></ng-content>

@@ -1,4 +1,4 @@
-import {Component, ElementRef, Input} from '@angular/core';
+import {Component, ElementRef, Input, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-modal',
@@ -9,7 +9,9 @@ import {Component, ElementRef, Input} from '@angular/core';
 export class ModalComponent {
   @Input() modaltitle: string;
   @Input() modalfootertitle: string;
-  @Input() showfooter: boolean
+  @Input() modaldescription: string;
+  @Input() showfooter: boolean;
+  @Input() showheader: boolean;
 
   hideContainer: boolean;
   modal: any;
@@ -17,7 +19,13 @@ export class ModalComponent {
   constructor(modal: ElementRef) {
     this.hideContainer = true;
     this.modal = modal;
-    this.showfooter = true;
+    this.showheader = false;
+    this.showfooter = false;
+  }
+
+  ngOnInit(){
+    if(typeof this.modaltitle != 'undefined') this.showheader = true;
+    if(typeof this.modalfootertitle != 'undefined') this.showfooter = true;
   }
 
   openModal(){
